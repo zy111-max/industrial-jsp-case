@@ -1,0 +1,94 @@
+{
+  "definition": "max(max job processing total, max_m(min job head on m + total machine load + min job tail on m))",
+  "proof": "The first operation on a machine cannot start before the minimum job head. Its machine processes its entire assigned load. The last operation still requires at least the minimum job tail to finish its job.",
+  "machine_bounds": [
+    {
+      "machine_id": 1,
+      "load_h": 59,
+      "minimum_job_head_h": 0,
+      "minimum_job_tail_h": 1,
+      "bound_h": 60
+    },
+    {
+      "machine_id": 2,
+      "load_h": 51,
+      "minimum_job_head_h": 0,
+      "minimum_job_tail_h": 1,
+      "bound_h": 52
+    },
+    {
+      "machine_id": 3,
+      "load_h": 56,
+      "minimum_job_head_h": 0,
+      "minimum_job_tail_h": 1,
+      "bound_h": 57
+    },
+    {
+      "machine_id": 4,
+      "load_h": 181,
+      "minimum_job_head_h": 0,
+      "minimum_job_tail_h": 2,
+      "bound_h": 183
+    },
+    {
+      "machine_id": 5,
+      "load_h": 183,
+      "minimum_job_head_h": 0,
+      "minimum_job_tail_h": 2,
+      "bound_h": 185
+    },
+    {
+      "machine_id": 6,
+      "load_h": 164,
+      "minimum_job_head_h": 0,
+      "minimum_job_tail_h": 2,
+      "bound_h": 166
+    },
+    {
+      "machine_id": 7,
+      "load_h": 171,
+      "minimum_job_head_h": 0,
+      "minimum_job_tail_h": 2,
+      "bound_h": 173
+    },
+    {
+      "machine_id": 8,
+      "load_h": 38,
+      "minimum_job_head_h": 5,
+      "minimum_job_tail_h": 1,
+      "bound_h": 44
+    },
+    {
+      "machine_id": 9,
+      "load_h": 38,
+      "minimum_job_head_h": 6,
+      "minimum_job_tail_h": 1,
+      "bound_h": 45
+    },
+    {
+      "machine_id": 10,
+      "load_h": 36,
+      "minimum_job_head_h": 10,
+      "minimum_job_tail_h": 1,
+      "bound_h": 47
+    },
+    {
+      "machine_id": 11,
+      "load_h": 55,
+      "minimum_job_head_h": 7,
+      "minimum_job_tail_h": 0,
+      "bound_h": 62
+    },
+    {
+      "machine_id": 12,
+      "load_h": 55,
+      "minimum_job_head_h": 7,
+      "minimum_job_tail_h": 0,
+      "bound_h": 62
+    }
+  ],
+  "lower_bound_h": 185,
+  "hybrid_matches_bound": true,
+  "cplex_incumbent_matches_bound": false,
+  "bound_not_passed_to_pilot_solvers": true
+}

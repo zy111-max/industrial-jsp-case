@@ -1,0 +1,4622 @@
+{
+  "data_status": "original FJSP transcription; source machine-number inconsistencies retained",
+  "n_jobs": 50,
+  "n_machines": 12,
+  "n_operations": 265,
+  "time_unit": "h",
+  "machine_index_base": 1,
+  "source": {
+    "author": "谢晋",
+    "title": "基于混合遗传禁忌搜索算法的作业车间调度方法",
+    "degree": "博士",
+    "institution": "华中科技大学",
+    "year": 2022,
+    "section": "6.2 FJSP实例验证与附录6",
+    "background": "某航天壳体机械加工车间；工件图纸与加工特征信息在原文中作保密处理",
+    "source_pdf_sha256": "8f3e976eccdeb3af529330ad4719768169a7f092b1dc254dc42ffd8ddf20316b",
+    "original_jobs": 50,
+    "original_machines": 12,
+    "original_quantity_per_family": 5,
+    "original_operations": 265
+  },
+  "observed_source_conflicts": [
+    {
+      "source_family_id": 2,
+      "operation_no": 7,
+      "operation_name": "检验",
+      "machines_as_printed": [
+        4,
+        5
+      ],
+      "inspection_machines_in_equipment_table": [
+        11,
+        12
+      ],
+      "resolution": "retained unchanged in raw transcription; family excluded from the recommended derivative"
+    },
+    {
+      "source_family_id": 3,
+      "operation_no": 2,
+      "operation_name": "检验",
+      "machines_as_printed": [
+        4,
+        5
+      ],
+      "inspection_machines_in_equipment_table": [
+        11,
+        12
+      ],
+      "resolution": "retained unchanged in raw transcription; family excluded from the recommended derivative"
+    },
+    {
+      "source_family_id": 4,
+      "operation_no": 6,
+      "operation_name": "检验",
+      "machines_as_printed": [
+        4,
+        5
+      ],
+      "inspection_machines_in_equipment_table": [
+        11,
+        12
+      ],
+      "resolution": "retained unchanged in raw transcription; family excluded from the recommended derivative"
+    },
+    {
+      "source_family_id": 5,
+      "operation_no": 3,
+      "operation_name": "检验",
+      "machines_as_printed": [
+        4,
+        5
+      ],
+      "inspection_machines_in_equipment_table": [
+        11,
+        12
+      ],
+      "resolution": "retained unchanged in raw transcription; family excluded from the recommended derivative"
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": 1,
+      "source_family_id": 1,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "镗工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 2,
+      "source_family_id": 1,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "镗工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 3,
+      "source_family_id": 1,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "镗工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 4,
+      "source_family_id": 1,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "镗工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 5,
+      "source_family_id": 1,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "镗工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 6,
+      "source_family_id": 2,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 27
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 35
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 7,
+      "source_family_id": 2,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 27
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 35
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 8,
+      "source_family_id": 2,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 27
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 35
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 9,
+      "source_family_id": 2,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 27
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 35
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 10,
+      "source_family_id": 2,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 27
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 35
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 11,
+      "source_family_id": 3,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 12,
+      "source_family_id": 3,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 13,
+      "source_family_id": 3,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 14,
+      "source_family_id": 3,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 15,
+      "source_family_id": 3,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 15
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 18
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 16,
+      "source_family_id": 4,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "打印",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "包装",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 17,
+      "source_family_id": 4,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "打印",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "包装",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 18,
+      "source_family_id": 4,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "打印",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "包装",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 19,
+      "source_family_id": 4,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "打印",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "包装",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 20,
+      "source_family_id": 4,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "立车",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "打印",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "包装",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 21,
+      "source_family_id": 5,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 8
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 22,
+      "source_family_id": 5,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 8
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 23,
+      "source_family_id": 5,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 8
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 24,
+      "source_family_id": 5,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 8
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 25,
+      "source_family_id": 5,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 8
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 26,
+      "source_family_id": 6,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 10
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 27,
+      "source_family_id": 6,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 10
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 28,
+      "source_family_id": 6,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 10
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 29,
+      "source_family_id": 6,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 10
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 30,
+      "source_family_id": 6,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 10
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 31,
+      "source_family_id": 7,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 10,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 32,
+      "source_family_id": 7,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 10,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 33,
+      "source_family_id": 7,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 10,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 34,
+      "source_family_id": 7,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 10,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 35,
+      "source_family_id": 7,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "车工",
+          "alternatives": [
+            {
+              "machine_id": 6,
+              "processing_time_h": 9
+            },
+            {
+              "machine_id": 7,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 10,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 36,
+      "source_family_id": 8,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 26
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 30
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 37,
+      "source_family_id": 8,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 26
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 30
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 38,
+      "source_family_id": 8,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 26
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 30
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 39,
+      "source_family_id": 8,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 26
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 30
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 40,
+      "source_family_id": 8,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 26
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 30
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 41,
+      "source_family_id": 9,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 20
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 15
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 18
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 42,
+      "source_family_id": 9,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 20
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 15
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 18
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 43,
+      "source_family_id": 9,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 20
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 15
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 18
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 44,
+      "source_family_id": 9,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 20
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 15
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 18
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 45,
+      "source_family_id": 9,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 20
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 15
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 6
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 4
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 3
+            }
+          ]
+        },
+        {
+          "operation_no": 5,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 2
+            }
+          ]
+        },
+        {
+          "operation_no": 6,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 18
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 12
+            }
+          ]
+        },
+        {
+          "operation_no": 7,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 5
+            }
+          ]
+        },
+        {
+          "operation_no": 8,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 9,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 46,
+      "source_family_id": 10,
+      "serial_within_family": 1,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 33
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 21
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 47,
+      "source_family_id": 10,
+      "serial_within_family": 2,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 33
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 21
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 48,
+      "source_family_id": 10,
+      "serial_within_family": 3,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 33
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 21
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 49,
+      "source_family_id": 10,
+      "serial_within_family": 4,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 33
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 21
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "job_id": 50,
+      "source_family_id": 10,
+      "serial_within_family": 5,
+      "operations": [
+        {
+          "operation_no": 1,
+          "name_zh": "铣工",
+          "alternatives": [
+            {
+              "machine_id": 4,
+              "processing_time_h": 33
+            },
+            {
+              "machine_id": 5,
+              "processing_time_h": 21
+            }
+          ]
+        },
+        {
+          "operation_no": 2,
+          "name_zh": "钳工",
+          "alternatives": [
+            {
+              "machine_id": 1,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 2,
+              "processing_time_h": 5
+            },
+            {
+              "machine_id": 3,
+              "processing_time_h": 4
+            }
+          ]
+        },
+        {
+          "operation_no": 3,
+          "name_zh": "清洗",
+          "alternatives": [
+            {
+              "machine_id": 8,
+              "processing_time_h": 3
+            },
+            {
+              "machine_id": 9,
+              "processing_time_h": 1
+            },
+            {
+              "machine_id": 10,
+              "processing_time_h": 1
+            }
+          ]
+        },
+        {
+          "operation_no": 4,
+          "name_zh": "检验",
+          "alternatives": [
+            {
+              "machine_id": 11,
+              "processing_time_h": 2
+            },
+            {
+              "machine_id": 12,
+              "processing_time_h": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
