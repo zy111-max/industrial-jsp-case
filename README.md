@@ -63,6 +63,8 @@ The machines and allocated loads are as follows (loads in hours):
 - Transport, setup, shifts and breakdowns are not modelled.
 - 26 of the 49 jobs revisit a machine (for example, J1 visits M3 twice and J11 visits M7 twice), and jobs have different numbers of operations. A loader must read the actual number of machine/time pairs on each line, not assume one operation per machine.
 
+The [CP and MILP models](models/README.md) index each operation separately, so repeated visits to one machine are represented as distinct operations. The model directory includes the OPL input used for the 1,800 s solver comparison and instructions to reproduce it.
+
 ## Lower bound and optimum
 
 The bound is `max(longest job, max over machines of (shortest job head before the machine + machine load + shortest job tail after it))`. It evaluates to **185 h** on M5; per-machine values are in `analytical_bounds.json`.
@@ -76,7 +78,8 @@ The bound is `max(longest job, max over machines of (shortest job head before th
 | `aero_housing_49_12_300.txt` | Solver input: first line `n m`, then one job per line of **zero-based** machine/time pairs |
 | `aero_housing_49_12_300.json` | Jobs, types, operation names and fixed assignments; **one-based** machines |
 | `jobs.csv`, `operations.csv`, `machines.csv` | The same data as tables |
-| `aero_housing_49_12_300.dat` | The same data for CPLEX OPL |
+| `aero_housing_49_12_300.dat` | OPL input with a 60 s time limit |
+| [`models/`](models/README.md) | CP and MILP models, OPL input for the 1,800 s comparison, and run instructions |
 | `source_fjsp_families.json` | Transcription of all 10 source types and 130 eligible pairs, with page references and the noted source inconsistency |
 | `original_fjsp_50_12_265.json` | The original 50-job FJSP expanded from the source |
 | `analytical_bounds.json` | Per-machine lower bounds |

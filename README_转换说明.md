@@ -64,6 +64,8 @@
 - 不考虑运输、换型、班次和故障。
 - 各工件的工序数不同，并且会重复访问同一台设备，读取时要按每行实际的"机器–时间"对数解析。
 
+[CP 与 MILP 模型](models/README.md#中文说明)均按实际工序编号建模，同一工件重复访问同一设备时，各道工序独立表示。模型目录附有 1800 s 对比试验的 OPL 输入文件及运行说明。
+
 ## 下界与最优解
 
 下界取以下各项中的最大值：
@@ -85,7 +87,8 @@
 | `aero_housing_49_12_300.txt` | 求解器输入：首行"工件数 机器数"，之后每行一个工件，机器编号从 0 开始 |
 | `aero_housing_49_12_300.json` | 工件类型、工序名称、固定分配，机器编号从 1 开始 |
 | `jobs.csv`、`operations.csv`、`machines.csv` | 工件、工序、设备表 |
-| `aero_housing_49_12_300.dat` | CPLEX OPL 数据 |
+| `aero_housing_49_12_300.dat` | OPL 数据，求解时限为 60 s |
+| [`models/`](models/README.md#中文说明) | CP 与 MILP 模型、1800 s 对比试验输入及运行说明 |
 | `source_fjsp_families.json` | 原文 10 类、130 组数据的转录，含页码和原文不一致说明 |
 | `original_fjsp_50_12_265.json` | 原文 50 个工件的 FJSP |
 | `analytical_bounds.json` | 逐机器下界 |
